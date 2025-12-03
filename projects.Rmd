@@ -1,1 +1,128 @@
 
+---
+title: "Test 1"
+author: "Erfan 667782783"
+date: "2025-09-08"
+output: html_document
+---
+
+ 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Executive summary
+ This report analyzes how user engagement affects website performance. The data shows that performance has missing values, while engagement scores range from 56 to 97. There is a moderate positive relationship between engagement and performance, meaning higher engagement often leads to better performance but not always. For managers, this highlights the need to improve systems so the site can handle higher traffic without slowing down.
+
+## Question 1
+
+Create the dataset .
+
+```{r} 
+# Create website performance dataset with business terminology
+webperfo <- data.frame(
+  engagement = airquality$Temp,
+  performance = airquality$Ozone,
+  server_load = airquality$Wind
+)
+```
+
+### Q1. A 
+there are 3 columns, the names are engagement, performance, server_load, because it more easier rather than printing it all at once.   
+```{r}
+head( webperfo )
+```
+
+### Q1. b
+the variable with missing values is performance. engagement scores range for minimum is (56) and for maximum is (97). 
+```{r}
+summary( webperfo )
+```
+
+### Q1. c
+the number of rows tells the manager how mach evidence they have to guide website improvements. 
+```{r}
+nrow ( webperfo )
+```
+
+### Q1. d
+The maximum engagement (97) is much higher than the median (79). This means that while most engagement scores cluster around the middle (around 79), there are some users with much higher engagement levels.
+```{r}
+max( webperfo$engagement)
+```
+
+### Q1. e
+we add na.rm = TRUE only when the variable has missing values, so they don’t block the calculation.
+ 
+```{r}
+max( webperfo$performance, na.rm= TRUE)
+```
+
+## Question 2 
+
+### Q2. a 
+it shows the raw data, but without labels, explanation, or a clear trend, it’s hard for a business manager to understand or use for decisions.
+
+```{r}
+plot(webperfo$engagement, webperfo$performance)
+```
+
+### Q2. b 
+Titles and labels translate the raw data into business language, making the chart easier to interpret and connect to decision-making.
+
+```{r}
+plot(x = webperfo$engagement, y = webperfo$performance,
+     main = "User Engagement vs Website Performance",
+     xlab = "Daily User Engagement Score", 
+     ylab = "Website Performance Score"
+     )
+```
+
+### Q2. c 
+ore engaged users = better website performance, on average.
+
+```{r}
+plot(x = webperfo$engagement, 
+     y = webperfo$performance,
+     main = "User Engagement vs Website Performance",
+     xlab = "Daily User Engagement Score", 
+     ylab = "Website Performance Score",
+     pch = 16,
+     col = "blue"
+     )
+```
+
+## Q2. d 
+This tells managers that higher user engagement is generally linked to better website performance, but other factors also play a role since the trend isn’t very strong.
+
+```{r}
+plot(x = webperfo$engagement, 
+     y = webperfo$performance,
+     main = "User Engagement vs Website Performance",
+     xlab = "Daily User Engagement Score", 
+     ylab = "Website Performance Score",
+     abline(lm(performance ~ engagement, data = webperfo), 
+       col = "red", lwd = 2)
+     )
+```
+
+## Question 3 
+
+## Q3. a 
+The correlation is about 0.35–0.45, which means there is a moderate positive relationship. As engagement goes up, performance usually goes up too, but not always. This tells a manager that engagement helps, but it’s not the only thing affecting performance.
+
+```{r}
+cor(webperfo$engagement, webperfo$performance, use = "complete.obs"
+    )
+```
+
+## Q3. b 
+When engagement goes up, website performance often slows down because more users put pressure on the system. An e-business manager should plan for this by improving servers or using tools to handle the extra traffic. This helps keep the website fast and smooth even when many people are online.
+
+
+
+
+
+
+     
