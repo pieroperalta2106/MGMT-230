@@ -1,2 +1,12 @@
 # Company BackGround
 Cloud9 Collective is an independent streetwear brand founded in 2025 in Vancouver, British Columbia. Born from the city’s skate, music, and creative scenes, it fills the gap for authentic, high-quality Canadian streetwear that’s premium yet accessible. Designed in-house and produced in limited batches with ethical partners, Cloud9 Collective celebrates comfort, confidence, and individuality for Gen Z and young adults who want style with soul.
+
+# Cloud9 Collective will offer:
+
+Hoodies & Crewnecks – premium cotton blends, relaxed fit
+Graphic Tees – modern minimalist designs and seasonal prints
+Cargo & Utility Pants – functional streetwear staples
+Caps & Accessories – embroidered logos and limited drops
+Seasonal Collections – small-batch releases
+
+Future service expansion may include custom printing, collaborations, and wholesale partnerships.
