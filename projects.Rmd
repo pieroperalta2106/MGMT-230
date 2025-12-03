@@ -1,13 +1,4 @@
 
----
-title: "Test 1"
-author: "Erfan 667782783"
-date: "2025-09-08"
-output: html_document
----
-
- 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
